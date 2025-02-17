@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="top">
+          <h1>Body Mass Index</h1>
+        </div>
+
+        <div class="bottom">
+          <div class="system">
+            <div id="metric" class="card selected">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-ruler"
+              >
+                <path
+                  d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"
+                />
+                <path d="m14.5 12.5 2-2" />
+                <path d="m11.5 9.5 2-2" />
+                <path d="m8.5 6.5 2-2" />
+                <path d="m17.5 15.5 2-2" />
+              </svg>
+              <p>Metric</p>
+            </div>
+            <div id="us" class="card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-scale"
+              >
+                <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+                <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+                <path d="M7 21h10" />
+                <path d="M12 3v18" />
+                <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
+              </svg>
+              <p>US</p>
+            </div>
+          </div>
+
+          <div class="input-section">
+            <div class="input-box">
+              <label for="height"
+                >Height <span id="height-unit">(in cm)</span></label
+              >
+              <input id="height" type="number" />
+            </div>
+            <div class="input-box">
+              <label for="weight"
+                >Weight <span id="weight-unit">(in kg)</span></label
+              >
+              <input id="weight" type="number" />
+            </div>
+            <button id="calculate">Calculate BMI</button>
+          </div>
+
+          <div class="bmi-result" id="bmi-result">
+            <h3>Your BMI Result:</h3>
+            <div class="bmi-value" id="bmi-value"></div>
+            <p id="bmi-category"></p>
+          </div>
+
+          <div class="bmi-scale">
+            <h3 class="bmi-title">BMI Scale</h3>
+            <div class="bmi-bar"></div>
+            <div class="bmi-labels">
+              <span>Underweight</span>
+              <span>Normal</span>
+              <span>Overweight</span>
+              <span>Obese</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
